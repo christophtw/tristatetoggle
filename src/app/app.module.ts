@@ -7,10 +7,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+import { TriStateToggle } from '../pages/home/tristatetoggle.component';
+
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    TriStateToggle
   ],
   imports: [
     BrowserModule,

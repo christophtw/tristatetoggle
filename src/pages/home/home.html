@@ -1,14 +1,20 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Tri-State-Toggle Test
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-list>
+  <ion-item>
+    <b>Ich mag Schnee: </b>
+    <tri-state-toggle (stateChange)="getState($event)" item-end></tri-state-toggle>
+  </ion-item>
+</ion-list>
+
+<br />
+state: {{value1}}
+
 </ion-content>
