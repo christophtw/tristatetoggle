@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Tri-State-Toggle Test
+      Tri-State-Toggle (2-Way) Test
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -10,11 +10,19 @@
 <ion-list>
   <ion-item>
     <b>Ich mag Schnee: </b>
-    <tri-state-toggle (stateChange)="getState($event)" item-end></tri-state-toggle>
+    <!-- Display TriStateToggle here, two-way-data binding is done by the "banana in a box"-syntax: [( )] -->
+    <tri-state-toggle [(state)]="value1" item-end></tri-state-toggle>
   </ion-item>
 </ion-list>
 
 <br />
-state: {{value1}}
+Ergebnis: {{value1}}
+<br />
+<br />
+
+<!-- for demo purposes only: -->
+<button ion-button color="light" (click)="setToYes()">Setze Toggle auf Ja</button><br />
+<button ion-button color="light" (click)="setToNo()">Setze Toggle auf Nein</button><br />
+<button ion-button color="light" (click)="setToNull()">Setze Toggle auf Null</button>
 
 </ion-content>

@@ -7,16 +7,27 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+// The toggle state is bound to "value1" by means of 2-way-databinding (see home.html)
   value1: any;
 
   constructor(public navCtrl: NavController) {
 
+// initialize value1:
     this.value1 = null;
 
   }
 
-  getState(value) {
-    this.value1 = value
-  }
+// for demo of 2-way-databinding only:
+setToYes() {
+  this.value1 = 1;
+}
+
+setToNo() {
+  this.value1 = 0;
+}
+
+setToNull() {
+  this.value1 = null;
+}
 
 }
